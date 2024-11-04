@@ -49,6 +49,11 @@
 - Todos o campos de cadastrar usuário, produto são obrigatórios.
 
 ----------------------------------------------------------------
+
+- Exemplo da IA funcionando e retornando a mensagem como base no nome do produto:
+
+<img src="https://i.ibb.co/3T58Vnh/caf93a41-d32c-4109-ad6f-5d4403407bee.jpg" alt="print da tela com a mensagem da IA" border="0" />
+
 ## Integrantes
 :small_blue_diamond:Gabriel Sampaio
 IOT, C#
