@@ -1,0 +1,66 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.5' // Atualiza para a versão mais recente
+	id 'io.spring.dependency-management' version '1.1.6'
+	id "com.microsoft.azure.azurewebapp" version "1.1.0"
+}
+
+group = 'com.taqui'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21) // Mantenha a versão do Java
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' } // Use o repositório milestone para dependências de IA
+}
+
+azurewebapp {
+	subscription = '77473478-7b1d-4345-95f9-5d7f456d8c84'
+	resourceGroup = 'rgsprint3'
+	appName = 'sprint3java'
+	pricingTier = 'F1'
+	region = 'brazilsouth'
+	runtime {
+		os = 'Windows'
+		webContainer = 'Java SE'
+		javaVersion = 'Java 21' // Mantenha a versão do Java compatível
+	}
+}
+
+ext {
+	set('springAiVersion', "1.0.0-M3") // Defina a versão do Spring AI
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.ai:spring-ai-ollama-spring-boot-starter' // Dependência do Spring AI
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'dev.langchain4j:langchain4j-ollama:0.34.0'
+
+	implementation 'com.auth0:java-jwt:4.4.0'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}" // Importando o BOM do Spring AI
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Cabeçalho</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+
+<header th:fragment="header" style="background-color: #fff; color: #333; padding: 20px; text-align: center; border-bottom: 1px solid #ddd;">
+  <h1 style="margin: 0; font-size: 2.5em;">TAQUI</h1>
+  <nav style="margin: 20px 0;">
+    <a href="/template" th:href="@{/template}" style="color: #333; text-decoration: none; margin: 0 10px; font-size: 1.2em;">Home</a>
+    <span style="color: #333;">|</span>
+    <a href="/listaUsuariosTemplate" th:href="@{/listaUsuariosTemplate}" style="color: #333; text-decoration: none; margin: 0 10px; font-size: 1.2em;">Lista de Usuários</a>
+    <span style="color: #333;">|</span>
+    <a href="/listaProdutosTemplate" th:href="@{/listaProdutosTemplate}" style="color: #333; text-decoration: none; margin: 0 10px; font-size: 1.2em;">Lista de Produtos</a>
+    <span style="color: #333;">|</span>
+    <a href="/cadastroProduto" th:href="@{/cadastroProduto}" style="color: #333; text-decoration: none; margin: 0 10px; font-size: 1.2em;">Cadastrar Produto</a>
+    <span style="color: #333;">|</span>
+    <a href="/auth/logout" th:href="@{/auth/logout}" style="color: #FF0000; text-decoration: none; margin: 0 10px; font-size: 1.2em;">Logout</a>
+
+  </nav>
+  <hr style="border: 0; border-top: 1px solid #ddd; margin: 20px 0;">
+</header>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4;">
+
+<div th:fragment="listaProdutos" style="max-width: 1000px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h2 style="color: #333; margin-bottom: 20px;">Lista de Produtos Cadastrados</h2>
+    <br/>
+
+    <div th:if="${mensagemIA != null}" style="padding: 20px; margin-bottom: 20px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
+        <h3 style="color: #333;">Mensagem da IA sobre o produto:</h3>
+        <p th:text="${mensagemIA}"></p>
+    </div>
+
+
+
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+        <tr>
+            <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">ID</th>
+            <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Nome</th>
+            <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Descrição</th>
+            <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Preço</th>
+            <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">ID usuario</th>
+            <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="produto : ${listaProdutos}">
+            <td style="padding: 10px; border-bottom: 1px solid #ddd;" th:text="${produto.id}">ID</td>
+            <td style="padding: 10px; border-bottom: 1px solid #ddd;" th:text="${produto.nome}">Nome</td>
+            <td style="padding: 10px; border-bottom: 1px solid #ddd;" th:text="${produto.descricao}">Descrição</td>
+            <td style="padding: 10px; border-bottom: 1px solid #ddd;" th:text="${produto.preco}">Preço</td>
+            <td style="padding: 10px; border-bottom: 1px solid #ddd;" th:text="${produto.idUsuario}">ID usuario</td>
+            <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                <a th:href="@{/editaProduto/{id}(id=${produto.id})}" style="color: #4CAF50; text-decoration: none; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">Editar</a>
+                <span> | </span>
+                <a th:href="@{/deletarProduto/{id}(id=${produto.id})}" style="color: #f44336; text-decoration: none; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">Deletar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
