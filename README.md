@@ -11,13 +11,14 @@
 ----------------------------------------------------------------------
 - Administrador (admin):
 
-Acesso completo a todas as funcionalidades da aplicação, incluindo:
-  - Acesso à página inicial.
-  -  Criação, edição e exclusão de produtos.
-  - Visualização da lista de produtos.
-  -  Gerenciamento de usuários(Visualizar e deletar).
-  - Acesso à página de login.
-  - Registro de novos usuários.
+  - Acesso completo a todas as funcionalidades da aplicação
+    
+    - Acesso à página inicial.
+    -  Criação, edição e exclusão de produtos.
+    - Visualização da lista de produtos.
+    -  Gerenciamento de usuários(Visualizar e deletar).
+    - Acesso à página de login.
+    - Registro de novos usuários.
 
 ----------------------------------------------------------------------
 - Todos tem acesso:
