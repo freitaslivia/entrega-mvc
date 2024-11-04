@@ -25,8 +25,6 @@
   - Fazer login e Cadastrar usuário
 
 -------------------------------------------------------------------
-  -  Cadastro de Produtos
+- Cadastro de Produtos
     
-    - Ao cadastrar um produto, a aplicação faz uma requisição a um serviço de IA que gera uma mensagem baseada no nome do produto.
-    
-    - Essa mensagem é exibida acima da lista de produtos, proporcionando feedback instantâneo ao usuário.
+  - Ao cadastrar um produto, a aplicação faz uma requisição a um serviço de IA que gera uma mensagem baseada no nome do produto. Essa mensagem é exibida acima da lista de produtos, proporcionando feedback instantâneo ao usuário.
