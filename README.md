@@ -45,7 +45,9 @@
   - Lista de Produtos: http://localhost:8080/listaProdutosTemplate
   - Cadastrar Produtos: http://localhost:8080/cadastroProduto
 ------------------------------------------------------------------
-Todos o campos de cadastrar usuário, produto são obrigatórios.
+
+- Todos o campos de cadastrar usuário, produto são obrigatórios.
+
 ----------------------------------------------------------------
 ## Integrantes
 :small_blue_diamond:Gabriel Sampaio
