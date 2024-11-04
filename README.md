@@ -38,6 +38,13 @@
       - login: tito
       - senha: 1
 ------------------------------------------------------------------
+  - Login: http://localhost:8080/auth/login
+  - Cadastrar: http://localhost:8080/auth/register
+  - Home : http://localhost:8080/template
+  - Lista de Usuarios : http://localhost:8080/listaUsuariosTemplate
+  - Lista de Produtos: http://localhost:8080/listaProdutosTemplate
+  - Cadastrar Produtos: http://localhost:8080/cadastroProduto
+
 ## Integrantes
 :small_blue_diamond:Gabriel Sampaio
 IOT, C#
