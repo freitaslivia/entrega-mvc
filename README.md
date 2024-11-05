@@ -39,7 +39,7 @@ https://drive.google.com/file/d/1MMqpLC5Zq-iQ5Fy6klnIZrqYzKbZcmiF/view?usp=shari
   - user:
       - login: livia
       - senha: 1
-  - user:
+  - admin:
       - login: tito
       - senha: 1
 ------------------------------------------------------------------
