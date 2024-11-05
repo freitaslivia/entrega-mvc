@@ -23,7 +23,7 @@ public class RegisterDTO {
     @NotBlank(message = "O campo email não pode estar vazio")
     @Size(max = 50, message = "O campo email pode ter no máximo 50 caracteres")
     String email;
-    @NotBlank(message = "O campo role não pode estar vazio")
+    
     UserRole role;
 
 }
